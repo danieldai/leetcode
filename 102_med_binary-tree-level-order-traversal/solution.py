@@ -4,7 +4,7 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-from typing import Optional
+from typing import List, Optional
 
 
 class Solution:
