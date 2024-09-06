@@ -23,3 +23,15 @@ class Solution:
             
         return None
         
+
+class Solution2:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+
+        p1 = headA
+        p2 = headB
+
+        while p1 != p2:
+            p1 = p1.next if p1 is not None else headB
+            p2 = p2.next if p2 is not None else headA
+        
+        return p1
