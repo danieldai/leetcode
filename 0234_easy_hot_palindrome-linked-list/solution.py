@@ -17,6 +17,7 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
 
+        # 总共有奇数个节点，slow指针移动中间节点的下一个节点
         if fast is not None:
             slow = slow.next
 
