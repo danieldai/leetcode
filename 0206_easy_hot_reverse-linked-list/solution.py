@@ -8,20 +8,16 @@ from typing import Optional
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head is None:
-            return None
 
-        r = p = head
-
-        p = p.next
-        r.next = None
+        pre = None
+        p = head
 
         while p is not None:
-            t = p.next
-            p.next = r
-            r = p
-            p = t
+            tmp = p.next
+            p.next = pre
+            pre = p
+            p = tmp
         
-        return r
+        return pre
 
         
