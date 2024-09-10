@@ -1,8 +1,16 @@
-https://leetcode.com/problems/fibonacci-number/description/
+https://leetcode.com/problems/maximum-subarray/description/
+
 
 视频讲解
 
-https://www.bilibili.com/video/BV1eg411w7gn?p=63&vd_source=dead283aa3efb297fb9f9c1d2b8e9fe8
+https://www.bilibili.com/video/BV1eg411w7gn?p=64&vd_source=dead283aa3efb297fb9f9c1d2b8e9fe8
+
+
+热度
+
+字节，微软，阿里巴巴，快手，腾讯，百度
+
+《LeetCode热题HOT 100》专题
 
 动态规划的解题步骤
 
@@ -17,3 +25,4 @@ https://www.bilibili.com/video/BV1eg411w7gn?p=63&vd_source=dead283aa3efb297fb9f9
 3、根据题目条件确定遍历顺序,并实现状态转移公式。
 同时在实现的过程中,可以适当的输出dp数组的值,确定自己的代码实现思
 路无误。具体怎么做,我们用一个实际的题目来说明。
+
