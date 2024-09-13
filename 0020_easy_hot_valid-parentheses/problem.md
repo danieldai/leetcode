@@ -4,6 +4,8 @@ https://leetcode.com/problems/valid-parentheses/description/
 
 https://www.bilibili.com/video/BV1eg411w7gn?p=52&vd_source=dead283aa3efb297fb9f9c1d2b8e9fe8
 
+https://programmercarl.com/0020.%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
+
 
 热度
 
