@@ -38,3 +38,25 @@ class Solution:
                 pre_node = cur_node
             
         return root
+
+
+class Solution2:
+    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+        if not root:
+            return None
+        
+        self.handle_connect(root.left, root.right)
+        
+        return root
+
+    def handle_connect(self, left: 'Optional[Node]', right: 'Optional[Node]'):
+        if not left or not right:
+            return
+        
+        left.next = right
+
+        self.handle_connect(left.left, left.right)
+        self.handle_connect(left.right, right.left)
+        self.handle_connect(right.left, right.right)
+
+
