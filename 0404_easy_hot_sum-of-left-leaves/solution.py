@@ -37,10 +37,13 @@ class Solution:
 
         while stack:
             node = stack.pop()
-            if not node.left and not node.right:
-                result += node.val
-            stack.append(node.right)
-            stack.append(node.left)
+            left = node.left
+            if left and not left.left and not left.right:
+                result += left.val
+            
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
         
         return result
-
