@@ -31,8 +31,8 @@ class Solution {
             result += left.val;
         }
 
-        result += sumOfLeftLeaves(root.left);
-        result += sumOfLeftLeaves(root.right);
+        result += sumOfLeftLeaves(left);
+        result += sumOfLeftLeaves(right);
 
         return result;
     }
