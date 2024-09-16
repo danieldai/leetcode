@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Definition for a binary tree node.
@@ -48,5 +47,44 @@ class Solution {
         result.addAll(inorder(root.right));
 
         return result;
+    }
+}
+
+class Solution2 {
+
+    boolean isValid = true;
+    TreeNode prev = null;
+
+    public boolean isValidBST(TreeNode root) {
+        inorder(root);
+        return isValid;
+    }
+
+    public void inorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        TreeNode cur = root;
+        Deque<TreeNode> stack = new LinkedList<>();
+
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            
+            cur = stack.pop();
+
+            if(prev != null) {
+                if(!(cur.val > prev.val)) {
+                    isValid = false;
+                    return;
+                }
+            }
+            prev = cur;
+
+            cur = cur.right;
+        }
     }
 }
