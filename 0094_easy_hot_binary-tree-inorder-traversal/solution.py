@@ -18,6 +18,7 @@ class Solution:
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
         
 
+# 中序遍历，左中右的顺序遍历
 class Solution2:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []

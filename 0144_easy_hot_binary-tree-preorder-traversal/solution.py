@@ -11,6 +11,8 @@ class TreeNode:
 
         
 class Solution:
+
+    # 前序遍历， 中左右
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         stack = deque()

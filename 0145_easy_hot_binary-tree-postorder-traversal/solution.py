@@ -17,6 +17,7 @@ class Solution:
 
         return self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val]
     
+    # 有序遍历，左右中
     def postorderTraversal2(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         stack = deque()
