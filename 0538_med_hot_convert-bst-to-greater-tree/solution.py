@@ -8,8 +8,9 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        
 
+
+# 迭代法，反中序遍历，采用右中左的遍历顺序
 class Solution:
     def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         stack = deque()
@@ -24,12 +25,16 @@ class Solution:
             cur = stack.pop()
             cur.val += addon
             addon = cur.val
+
             cur = cur.left
 
         return root
+        
 
+# 先把二叉搜索树按中序遍历转为数组，然后在数组上处理
+class Solution2:
 
-    def convertBST2(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+    def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return None
         
@@ -46,4 +51,28 @@ class Solution:
         
         return self.inorder(root.left) + [root] + self.inorder(root.right)
         
+
+# 直接采用反中序的遍历方法来处理，边遍历边处理
+class Solution3:
+    def __init__(self) -> None:
+        self.addon = 0
+
+    def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+        
+        self.inorder(root)
+
+        return root
+
+    def inorder(self, root: Optional[TreeNode]) -> None:
+        if not root:
+            return
+        
+        self.inorder(root.right)
+
+        root.val += self.addon
+        self.addon = root.val
+
+        self.inorder(root.left)
         

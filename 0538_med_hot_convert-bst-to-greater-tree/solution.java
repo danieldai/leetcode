@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -42,6 +44,74 @@ class Solution {
         result.addAll(inorder(root.right));
 
         return result;
+    }
+
+}
+
+// 递归法，反中序遍历，右中左
+class Solution2 {
+    int addon = 0;
+
+    public TreeNode convertBST(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+
+        inorder(root);
+
+        return root;
+    }
+
+    private void inorder(TreeNode root) {
+        if(root == null) {
+            return;
+        }
+
+        inorder(root.right);
+
+        root.val += addon;
+        addon = root.val;
+
+        inorder(root.left);
+    }
+
+}
+
+
+class Solution3 {
+    int addon = 0;
+
+    public TreeNode convertBST(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+
+        inorder(root);
+
+        return root;
+    }
+
+    private void inorder(TreeNode root) {
+        if(root == null) {
+            return;
+        }
+
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode cur = root;
+
+        while(cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.right;
+            }
+
+            cur = stack.pop();
+
+            cur.val += addon;
+            addon = cur.val;
+
+            cur = cur.left;
+        }
     }
 
 }
