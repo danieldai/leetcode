@@ -50,3 +50,36 @@ class Solution2:
             res = [a + b for a in res for b in Solution.chars[digit]]
 
         return res
+    
+
+class Solution3:
+    def __init__(self):
+        self.letterMap = [
+            "",     # 0
+            "",     # 1
+            "abc",  # 2
+            "def",  # 3
+            "ghi",  # 4
+            "jkl",  # 5
+            "mno",  # 6
+            "pqrs", # 7
+            "tuv",  # 8
+            "wxyz"  # 9
+        ]
+        self.result = []
+    
+    def getCombinations(self, digits, index, s):
+        if index == len(digits):
+            self.result.append(s)
+            return
+        
+        digit = int(digits[index])
+        letters = self.letterMap[digit]
+        for letter in letters:
+            self.getCombinations(digits, index + 1, s + letter)
+    
+    def letterCombinations(self, digits):
+        if len(digits) == 0:
+            return self.result
+        self.getCombinations(digits, 0, "")
+        return self.result
