@@ -5,6 +5,20 @@ https://leetcode.com/problems/binary-search/description/
 
 https://www.bilibili.com/video/BV1eg411w7gn/?p=43&vd_source=dead283aa3efb297fb9f9c1d2b8e9fe8
 
+过去3个月
+字节跳动
+3
+过去6个月
+Meta
+2
+微软Microsoft
+2
+6个月前
+亚马逊
+6
+谷歌Google
+
+
 
 注意左右边界索引的初始话的值，以及循环的终止条件
 

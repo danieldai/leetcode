@@ -6,6 +6,13 @@ https://www.bilibili.com/video/BV1eg411w7gn?p=63&vd_source=dead283aa3efb297fb9f9
 
 https://programmercarl.com/0509.%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
 
+6个月前
+字节跳动
+5
+亚马逊
+2
+谷歌Google
+
 
 
 动态规划的解题步骤

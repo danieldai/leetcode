@@ -10,3 +10,25 @@ f(n) = 1 when n = 1
 f(n) = 2 when n = 2
 f(n) = f(n-1) + f(n-2) when n > 3
 
+过去3个月
+美团
+3
+字节跳动
+2
+谷歌Google
+苹果Apple
+奥多比Adobe
+过去6个月
+亚马逊
+3
+腾讯
+3
+微软Microsoft
+2
+6个月前
+Meta
+5
+华为
+5
+滴滴
+2
