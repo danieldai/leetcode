@@ -6,11 +6,10 @@ class Solution:
         if not nums:
             return None
         
-        f = nums[0]
-        ans = nums[0]
+        f = 0
+        ans = float('-inf')
         
-        
-        for i in range(1, len(nums)):
+        for i in range(len(nums)):
             if f > 0:
                 f = f + nums[i]
             else:
